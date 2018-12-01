@@ -1,0 +1,73 @@
+  public string getS(string getH, string s_)
+        {
+            double sinH;
+            string S;
+            sinH = Math.Sin((Math.PI *  double.Parse(getH) /180));
+            double dS;
+            dS = (double.Parse(s_) / sinH);
+            S = dS + "";
+            return S;
+        }
+        public string getH(string time,string s_)
+        {
+            string s = "";
+            double SShtrih;
+            if (s_ == "")
+            {
+                s = "";
+            }
+            else
+            {
+                SShtrih = double.Parse(s_);                                         
+                B = getNubmerDay();
+                double SinB = getsinB(B+ "");
+                Q = 23.45 * SinB;
+                sinQ = getsinQ(Q + "");
+                cosQ = Math.Cos(Math.PI * Q / 180);
+                sinF = Math.Sin(Math.PI * double.Parse(shirota) / 180);
+                cosF = Math.Cos(Math.PI * double.Parse(shirota) / 180); 
+                double w;
+                w = getLST(time);
+                cosW = Math.Cos(Math.PI * w / 180);
+                sinh = Math.Asin( ((sinQ * sinF) + (cosQ * cosF * cosW)));
+                double bufS = double.Parse(sinh.ToString());
+                s = bufS + "";                
+            }
+            return s;
+        }
+        public double getNubmerDay()
+        {
+            double B;
+            int D;
+            List<int> ggggMMdd;
+            ggggMMdd = parseData(labelGGGGMMDD);
+            int year;
+            int month;
+            int day;
+            year = ggggMMdd[0];
+            month = ggggMMdd[1];
+            day = ggggMMdd[2];
+            D = numberDay(year, month, day);
+            B = ((360 * (D - 81)) / 365);
+            return B;
+        }
+        public double getsinB(string b)
+        {
+            double B = double.Parse(b);
+            double SinB = Math.Sin(Math.PI * B / 180);
+            return SinB;
+        }
+        public double getsinQ(string q)
+        {
+            double Q;
+            double sinQ;
+            Q = double.Parse(q);
+            sinQ = Math.Sin(Math.PI * Q / 180);
+            return sinQ;
+        }      
+        public double getLST(string time)
+        {
+            double LST = (parseStringTime(time) / 60);
+            double w = 15 * (LST - 12);
+            return w;
+        }

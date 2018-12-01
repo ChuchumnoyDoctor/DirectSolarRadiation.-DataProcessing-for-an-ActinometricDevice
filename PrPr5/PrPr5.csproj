@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{550099C7-497E-4037-A076-C31DDC93CD6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PrPr5</RootNamespace>
+    <AssemblyName>PrPr5</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net20\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitmapOfSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BitmapOfSeries.Designer.cs">
+      <DependentUpon>BitmapOfSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BottomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BottomPanel.Designer.cs">
+      <DependentUpon>BottomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckGridView.Designer.cs">
+      <DependentUpon>CheckGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertFilename2DataTime.cs" />
+    <Compile Include="CustomChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomChart.Designer.cs">
+      <DependentUpon>CustomChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLegRow.cs" />
+    <Compile Include="DataOptionsOfDiagramm.cs" />
+    <Compile Include="DrawRamka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawRamka.Designer.cs">
+      <DependentUpon>DrawRamka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawRomashka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawRomashka.Designer.cs">
+      <DependentUpon>DrawRomashka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVORVAK.cs" />
+    <Compile Include="DataRomashka.cs" />
+    <Compile Include="LegBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LegBox.Designer.cs">
+      <DependentUpon>LegBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LegendRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LegendRow.Designer.cs">
+      <DependentUpon>LegendRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LepestokKontur.cs" />
+    <Compile Include="ListtoDataTableConverter.cs" />
+    <Compile Include="newLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="newLabel.Designer.cs">
+      <DependentUpon>newLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsOfDiagramm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsOfDiagramm.Designer.cs">
+      <DependentUpon>OptionsOfDiagramm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelOptions.Designer.cs">
+      <DependentUpon>PanelOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointCoorGrValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointCoorGrValue.Designer.cs">
+      <DependentUpon>PointCoorGrValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointValueShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointValueShow.Designer.cs">
+      <DependentUpon>PointValueShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataIzmerValue.cs" />
+    <Compile Include="PropertyOfDevice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyOfDevice.Designer.cs">
+      <DependentUpon>PropertyOfDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawLepestok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawLepestok.Designer.cs">
+      <DependentUpon>DrawLepestok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seria.cs" />
+    <Compile Include="SpravInform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpravInform.Designer.cs">
+      <DependentUpon>SpravInform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SummRadiation.cs" />
+    <EmbeddedResource Include="BitmapOfSeries.resx">
+      <DependentUpon>BitmapOfSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BottomPanel.resx">
+      <DependentUpon>BottomPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckGridView.resx">
+      <DependentUpon>CheckGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomChart.resx">
+      <DependentUpon>CustomChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawLepestok.resx">
+      <DependentUpon>DrawLepestok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawRamka.resx">
+      <DependentUpon>DrawRamka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrawRomashka.resx">
+      <DependentUpon>DrawRomashka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LegBox.resx">
+      <DependentUpon>LegBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LegendRow.resx">
+      <DependentUpon>LegendRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsOfDiagramm.resx">
+      <DependentUpon>OptionsOfDiagramm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelOptions.resx">
+      <DependentUpon>PanelOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointCoorGrValue.resx">
+      <DependentUpon>PointCoorGrValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointValueShow.resx">
+      <DependentUpon>PointValueShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PropertyOfDevice.resx">
+      <DependentUpon>PropertyOfDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpravInform.resx">
+      <DependentUpon>SpravInform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\PanelOptions.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
